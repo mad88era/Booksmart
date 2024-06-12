@@ -10,9 +10,9 @@ username}
 }
 }
 `;
-export const LOGIN = gql`
+export const LOGIN_USER = gql`
 mutation login($email: String!, $password: String!) {
-    addUser(email:$email, password:$password)
+    login(email:$email, password:$password)
     {
     token
     user{
@@ -33,9 +33,9 @@ authors
 image}}}`;
 
 export const REMOVE_BOOK = gql`
-mutation removeBook($bookID: ID!)
+mutation removeBook($bookId: ID!)
 {
-removeBook(bookID:$bookID)
+removeBook(bookId:$bookId)
 {
 _id
 username
